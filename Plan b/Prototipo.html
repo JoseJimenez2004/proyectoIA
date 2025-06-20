@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulación de Búsqueda de Camino con Obstáculos</title>
+    <link rel="stylesheet" href="/Plan b/static/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Simulación de Búsqueda de Camino con Obstáculos</h1>
+        
+        <div class="instructions">
+            <h3>Instrucciones:</h3>
+            <p>1. Haz clic en el área para colocar obstáculos (múltiples clics crean polígonos).</p>
+            <p>2. Selecciona el modo "Colocar Policía (I)" o "Colocar Ladrón (O)" y haz clic para colocarlos.</p>
+            <p>3. Arrastra los puntos I (policía) y O (ladrón) para moverlos.</p>
+            <p>4. Usa el botón "Jugar" para mover al policía manualmente con las flechas del teclado.</p>
+            <p>5. Selecciona un algoritmo para encontrar múltiples caminos posibles.</p>
+        </div>
+        
+        <div class="mode-selector">
+            <label><input type="radio" name="mode" value="obstacle" checked> Dibujar Obstáculos</label>
+            <label><input type="radio" name="mode" value="start"> Colocar Policía (I)</label>
+            <label><input type="radio" name="mode" value="end"> Colocar Ladrón (O)</label>
+        </div>
+        
+        <canvas id="gameCanvas" width="800" height="500"></canvas>
+        
+        <div class="controls">
+            <button id="playBtn">Jugar</button>
+            <button id="vorazBtn">Búsqueda Voraz (10 caminos)</button>
+            <button id="aStarBtn">Búsqueda A* (10 caminos)</button>
+            <button id="heuristicaBtn">Búsqueda Heurística (10 caminos)</button>
+            <button id="resetBtn">Reiniciar</button>
+        </div>
+        
+        <div id="pathOptionsContainer" class="path-options" style="display: none;">
+            <p>Selecciona un camino para visualizarlo:</p>
+        </div>
+        
+        <div class="info">
+            <h3>Información del Problema:</h3>
+            <p>El espacio de estados consiste en todos los vértices de los polígonos obstáculos más los puntos inicial y final.</p>
+            <p>Los caminos deben rodear los obstáculos sin atravesarlos.</p>
+            <div id="pathInfo" class="path-stats"></div>
+        </div>
+    </div>
+    <script src="/Plan b/static/script.js"></script>
+    </body>
+</html>
