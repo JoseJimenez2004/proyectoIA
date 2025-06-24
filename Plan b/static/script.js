@@ -30,13 +30,13 @@
         // Colores
         const colors = {
             background: '#ffffff',
-            obstacle: '#8b4513',
+            obstacle: '#ffff00',
             start: '#2196F3',
             end: '#f44336',
             path: '#4CAF50',
             visited: '#FFC107',
             current: '#9C27B0',
-            polygon: '#000000',
+            polygon: '#FFFF00',
             alternativePaths: [
                 '#FF5722', '#9C27B0', '#3F51B5', '#009688', '#795548',
                 '#E91E63', '#CDDC39', '#00BCD4', '#607D8B', '#8BC34A'
